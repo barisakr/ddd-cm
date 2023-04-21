@@ -27,7 +27,7 @@ public static class DependencyInjection
                   options.UseNpgsql("Server=ep-wandering-thunder-622225.us-east-2.aws.neon.tech;Port=5432;Database=neondb;User ID=barisrakardevelopment;Password=QxktRDHo14UY")
               );
 
-          //    postgres://develop:0PIgno7yEJYN@ep-wandering-thunder-622225.us-east-2.aws.neon.tech/neondb
+        //    postgres://develop:0PIgno7yEJYN@ep-wandering-thunder-622225.us-east-2.aws.neon.tech/neondb
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IMenuRepository, MenuRepository>();
         return services;
@@ -45,18 +45,23 @@ public static class DependencyInjection
         services.AddSingleton(Options.Create(jwtSettings));
         services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
 
-        services.AddAuthentication(defaultScheme: JwtBearerDefaults.AuthenticationScheme)
-            .AddJwtBearer(options => options.TokenValidationParameters = new TokenValidationParameters
+        var key = "This is my first Test Key";
+        services.AddAuthentication(x =>
+        {
+            x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        }).AddJwtBearer(x =>
+        {
+            x.RequireHttpsMetadata = false;
+            x.SaveToken = true;
+            x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
             {
-                ValidateIssuer = true,
-                ValidateAudience = true,
-                ValidateLifetime = true,
                 ValidateIssuerSigningKey = true,
-                ValidIssuer = jwtSettings.Issuer,
-                ValidAudience = jwtSettings.Audience,
-                IssuerSigningKey = new SymmetricSecurityKey(
-                    Encoding.UTF8.GetBytes(jwtSettings.Secret))
-            });
+                ValidateIssuer = false,
+                ValidateAudience = false,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key))
+            };
+        });
 
         return services;
     }
