@@ -36,16 +36,10 @@ public static class DependencyInjection
     ConfigurationManager configuration)
     {
         var jwtSettings = new JwtSettings();
-        configuration.Bind(JwtSettings.SectionName, jwtSettings);
-
-        jwtSettings.Audience = "ChargeManagement";
-        jwtSettings.Issuer = "ChargeManagement";
-        jwtSettings.ExpiryMinutes = 60;
-
+        configuration.Bind(JwtSettings.SectionName, jwtSettings); 
         services.AddSingleton(Options.Create(jwtSettings));
         services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
 
-        var key = "This is my first Test Key";
         services.AddAuthentication(x =>
         {
             x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -59,7 +53,9 @@ public static class DependencyInjection
                 ValidateIssuerSigningKey = true,
                 ValidateIssuer = false,
                 ValidateAudience = false,
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key))
+                ValidAudience = jwtSettings.Audience,
+                ValidIssuer = jwtSettings.Issuer,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.Secret))
             };
         });
 
