@@ -1,0 +1,12 @@
+C:\Users\z004kxwr\Desktop\DDD\Project\ChargeManagement\ChargeManagement.Domain\bin\Debug\net7.0\ChargeManagement.Domain.deps.json
+C:\Users\z004kxwr\Desktop\DDD\Project\ChargeManagement\ChargeManagement.Domain\bin\Debug\net7.0\ChargeManagement.Domain.dll
+C:\Users\z004kxwr\Desktop\DDD\Project\ChargeManagement\ChargeManagement.Domain\bin\Debug\net7.0\ChargeManagement.Domain.pdb
+C:\Users\z004kxwr\Desktop\DDD\Project\ChargeManagement\ChargeManagement.Domain\obj\Debug\net7.0\ChargeManagement.Domain.csproj.AssemblyReference.cache
+C:\Users\z004kxwr\Desktop\DDD\Project\ChargeManagement\ChargeManagement.Domain\obj\Debug\net7.0\ChargeManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\z004kxwr\Desktop\DDD\Project\ChargeManagement\ChargeManagement.Domain\obj\Debug\net7.0\ChargeManagement.Domain.AssemblyInfoInputs.cache
+C:\Users\z004kxwr\Desktop\DDD\Project\ChargeManagement\ChargeManagement.Domain\obj\Debug\net7.0\ChargeManagement.Domain.AssemblyInfo.cs
+C:\Users\z004kxwr\Desktop\DDD\Project\ChargeManagement\ChargeManagement.Domain\obj\Debug\net7.0\ChargeManagement.Domain.csproj.CoreCompileInputs.cache
+C:\Users\z004kxwr\Desktop\DDD\Project\ChargeManagement\ChargeManagement.Domain\obj\Debug\net7.0\ChargeManagement.Domain.dll
+C:\Users\z004kxwr\Desktop\DDD\Project\ChargeManagement\ChargeManagement.Domain\obj\Debug\net7.0\refint\ChargeManagement.Domain.dll
+C:\Users\z004kxwr\Desktop\DDD\Project\ChargeManagement\ChargeManagement.Domain\obj\Debug\net7.0\ChargeManagement.Domain.pdb
+C:\Users\z004kxwr\Desktop\DDD\Project\ChargeManagement\ChargeManagement.Domain\obj\Debug\net7.0\ref\ChargeManagement.Domain.dll

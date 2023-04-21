@@ -1,0 +1,3 @@
+C:\Users\z004kxwr\Desktop\DDD\Project\ChargeManagement\bin\Publish\ChargeManagement.Contracts.dll
+C:\Users\z004kxwr\Desktop\DDD\Project\ChargeManagement\bin\Publish\ChargeManagement.Contracts.deps.json
+C:\Users\z004kxwr\Desktop\DDD\Project\ChargeManagement\bin\Publish\ChargeManagement.Contracts.pdb

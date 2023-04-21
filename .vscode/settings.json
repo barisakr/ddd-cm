@@ -1,0 +1,11 @@
+{
+    "workbench.tree.indent": 40,
+    "workbench.activityBar.iconClickBehavior": "toggle",
+    "workbench.iconTheme": "vscode-icons",
+    "files.exclude": {
+        "**/bin": false,
+        "**/obj": false
+    },
+    "appService.defaultWebAppToDeploy": "None", 
+    "appService.deploySubpath": "bin\\Publish"
+}

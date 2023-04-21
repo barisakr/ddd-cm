@@ -1,0 +1,150 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\z004kxwr\\Desktop\\DDD\\Project\\ChargeManagement\\ChargeManagement.Application\\ChargeManagement.Application.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\z004kxwr\\Desktop\\DDD\\Project\\ChargeManagement\\ChargeManagement.Application\\ChargeManagement.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\z004kxwr\\Desktop\\DDD\\Project\\ChargeManagement\\ChargeManagement.Application\\ChargeManagement.Application.csproj",
+        "projectName": "ChargeManagement.Application",
+        "projectPath": "C:\\Users\\z004kxwr\\Desktop\\DDD\\Project\\ChargeManagement\\ChargeManagement.Application\\ChargeManagement.Application.csproj",
+        "packagesPath": "C:\\Users\\z004kxwr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\z004kxwr\\Desktop\\DDD\\Project\\ChargeManagement\\ChargeManagement.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\z004kxwr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://artifactory.siemens.net/artifactory/api/nuget/nuget-remote": {},
+          "https://captain.rtf.siemens.net/artifactory/api/nuget/tia-dev-nuget": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\z004kxwr\\Desktop\\DDD\\Project\\ChargeManagement\\ChargeManagement.Domain\\ChargeManagement.Domain.csproj": {
+                "projectPath": "C:\\Users\\z004kxwr\\Desktop\\DDD\\Project\\ChargeManagement\\ChargeManagement.Domain\\ChargeManagement.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.5.2, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\z004kxwr\\Desktop\\DDD\\Project\\ChargeManagement\\ChargeManagement.Domain\\ChargeManagement.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\z004kxwr\\Desktop\\DDD\\Project\\ChargeManagement\\ChargeManagement.Domain\\ChargeManagement.Domain.csproj",
+        "projectName": "ChargeManagement.Domain",
+        "projectPath": "C:\\Users\\z004kxwr\\Desktop\\DDD\\Project\\ChargeManagement\\ChargeManagement.Domain\\ChargeManagement.Domain.csproj",
+        "packagesPath": "C:\\Users\\z004kxwr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\z004kxwr\\Desktop\\DDD\\Project\\ChargeManagement\\ChargeManagement.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\z004kxwr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://artifactory.siemens.net/artifactory/api/nuget/nuget-remote": {},
+          "https://captain.rtf.siemens.net/artifactory/api/nuget/tia-dev-nuget": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Ardalis.SmartEnum": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "ErrorOr": {
+              "target": "Package",
+              "version": "[0.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

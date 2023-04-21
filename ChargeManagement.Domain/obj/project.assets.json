@@ -1,0 +1,137 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Ardalis.SmartEnum/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Ardalis.SmartEnum.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Ardalis.SmartEnum.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ErrorOr/0.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/ErrorOr.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/ErrorOr.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Ardalis.SmartEnum/2.1.0": {
+      "sha512": "RY3BulzPKbcwGhsY/gYkn8sPQtbipF6XheDHbW/TSVUtyFJ/FKTnY2Tx+34WLL5+e/9UnSQcGd3dOqpdN1QzKA==",
+      "type": "package",
+      "path": "ardalis.smartenum/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ardalis.smartenum.2.1.0.nupkg.sha512",
+        "ardalis.smartenum.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/Ardalis.SmartEnum.dll",
+        "lib/netstandard2.0/Ardalis.SmartEnum.xml"
+      ]
+    },
+    "ErrorOr/0.2.0": {
+      "sha512": "wTEdBKVSFX2Lm6SvARPrjM4d3ptzBuxmpDlWHV49N8ULzf+VDWGoGSTIxhh0bEc6EYcanb3iFI9CQTpMJ5qYSg==",
+      "type": "package",
+      "path": "erroror/0.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "erroror.0.2.0.nupkg.sha512",
+        "erroror.nuspec",
+        "icon-square.png",
+        "lib/net6.0/ErrorOr.dll",
+        "lib/net6.0/ErrorOr.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Ardalis.SmartEnum >= 2.1.0",
+      "ErrorOr >= 0.2.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\z004kxwr\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\z004kxwr\\Desktop\\DDD\\Project\\ChargeManagement\\ChargeManagement.Domain\\ChargeManagement.Domain.csproj",
+      "projectName": "ChargeManagement.Domain",
+      "projectPath": "C:\\Users\\z004kxwr\\Desktop\\DDD\\Project\\ChargeManagement\\ChargeManagement.Domain\\ChargeManagement.Domain.csproj",
+      "packagesPath": "C:\\Users\\z004kxwr\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\z004kxwr\\Desktop\\DDD\\Project\\ChargeManagement\\ChargeManagement.Domain\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\z004kxwr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "https://artifactory.siemens.net/artifactory/api/nuget/nuget-remote": {},
+        "https://captain.rtf.siemens.net/artifactory/api/nuget/tia-dev-nuget": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "Ardalis.SmartEnum": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          },
+          "ErrorOr": {
+            "target": "Package",
+            "version": "[0.2.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

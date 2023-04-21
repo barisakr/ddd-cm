@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "5JGPhUMhQ4sTuUtpEliRyHDEeIdRh/yfU5M01hDX/qY=",
+  "Source": "ChargeManagement.Api",
+  "BasePath": "_content/ChargeManagement.Api",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
