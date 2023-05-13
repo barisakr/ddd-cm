@@ -1,5 +1,0 @@
-C:\Users\z004kxwr\Desktop\DDD\Project\ChargeManagement\ChargeManagement.Domain\bin\Release\net7.0\publish\ChargeManagement.Domain.dll
-C:\Users\z004kxwr\Desktop\DDD\Project\ChargeManagement\ChargeManagement.Domain\bin\Release\net7.0\publish\ChargeManagement.Domain.deps.json
-C:\Users\z004kxwr\Desktop\DDD\Project\ChargeManagement\ChargeManagement.Domain\bin\Release\net7.0\publish\ChargeManagement.Domain.pdb
-C:\Users\z004kxwr\Desktop\DDD\Project\ChargeManagement\ChargeManagement.Domain\bin\Release\net7.0\publish\Ardalis.SmartEnum.dll
-C:\Users\z004kxwr\Desktop\DDD\Project\ChargeManagement\ChargeManagement.Domain\bin\Release\net7.0\publish\ErrorOr.dll
