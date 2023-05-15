@@ -5,7 +5,7 @@ using ChargeManagement.Domain.Menu.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace ChargeManagement.Infrastructure.Persistence.Configutations
+namespace ChargeManagement.Infrastructure.Persistence.Configuations
 {
     public class MenuConfigurations : IEntityTypeConfiguration<Menu>
     {

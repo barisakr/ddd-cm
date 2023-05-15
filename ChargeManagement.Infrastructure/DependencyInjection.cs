@@ -29,6 +29,7 @@ public static class DependencyInjection
 
         //    postgres://develop:0PIgno7yEJYN@ep-wandering-thunder-622225.us-east-2.aws.neon.tech/neondb
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IBrandRepository, BrandRepository>();
         services.AddScoped<IMenuRepository, MenuRepository>();
         return services;
     }
