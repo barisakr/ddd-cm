@@ -1,15 +1,20 @@
-﻿using ChargeManagement.Application.Common.Commands.CreateBrand; 
+﻿using ChargeManagement.Application.Authentication.Queries.Login;
+using ChargeManagement.Application.Common;
+using ChargeManagement.Application.Common.Commands.CreateBrand;
+using ChargeManagement.Application.Common.Queries.GetBrands;
 using ChargeManagement.Application.Users;
 using ChargeManagement.Contracts.Common.CreateBrand;
 using ChargeManagement.Contracts.Menus;
 using ChargeManagement.Contracts.Users;
 using MapsterMapper;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ChargeManagement.Api.Controllers
 {
     [Route("api/[controller]")]
+    [AllowAnonymous]
     public class CommonController : ApiController
     {
         private readonly IMapper _mapper;
@@ -23,8 +28,7 @@ namespace ChargeManagement.Api.Controllers
 
         [HttpPost]
         [Route("CreateBrand")]
-
-        public async Task<IActionResult> GetUserProfileById([FromBody] CreateBrandRequest request)
+        public async Task<IActionResult> CreateBrand([FromBody] CreateBrandRequest request)
         {
             {
                 var command = _mapper.Map<CreateBrandCommand>((request));
@@ -34,6 +38,28 @@ namespace ChargeManagement.Api.Controllers
                     brand => Ok(_mapper.Map<CreateBrandResponse>(brand)),
                     errors => Problem(errors));
 
+            }
+        }
+
+        [HttpGet]
+        [Route("GetBrands")]
+        public async Task<IActionResult> GetBrands()
+        {
+            try
+            {
+                {
+                    var brandResult = await _mediatr.Send(new GetBrandsQuery()); 
+
+                    return brandResult.Match(
+                        brand => Ok(brandResult.Value),
+                        errors => Problem(errors));
+
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
             }
         }
     }

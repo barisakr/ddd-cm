@@ -1,4 +1,4 @@
-using ChargeManagement.Domain.Brand;
+using ChargeManagement.Domain.Brand; 
 using ChargeManagement.Domain.Menu;
 using ChargeManagement.Domain.User;
 using Microsoft.EntityFrameworkCore;
@@ -13,7 +13,7 @@ namespace ChargeManagement.Infrastructure.Persistence
 
         public DbSet<Menu> Menus { get; set; }
         public DbSet<User> Users { get; set; } 
-        public DbSet<Brand> Brands { get; set; }
+        public DbSet<Brand> Brands { get; set; } 
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

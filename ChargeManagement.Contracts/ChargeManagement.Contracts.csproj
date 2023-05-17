@@ -4,5 +4,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChargeManagement.Domain\ChargeManagement.Domain.csproj" />
+  </ItemGroup>
 
 </Project>

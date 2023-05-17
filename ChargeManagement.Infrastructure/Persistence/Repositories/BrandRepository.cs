@@ -1,8 +1,10 @@
 ﻿
 using ChargeManagement.Application.Common.Interfaces.Persistence;
-using ChargeManagement.Domain.Brand;
+using ChargeManagement.Domain.Brand; 
+using ChargeManagement.Domain.Brand.ValueObjects;
 using ChargeManagement.Domain.Menu;
 using ChargeManagement.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace ChargeManagement.Infrastructure.Persistence.Repositories
 {
@@ -19,6 +21,11 @@ namespace ChargeManagement.Infrastructure.Persistence.Repositories
         {
             _context.Add(menu);
             _context.SaveChanges();
+        }
+
+        public async Task<List<Brand>> GetBrandsAsync()
+        { 
+            return await _context.Brands.ToListAsync(); 
         }
     }
 }

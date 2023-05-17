@@ -1,17 +1,8 @@
-﻿ 
-using ChargeManagement.Application.Authentication.Common;
-using ChargeManagement.Application.Common.Commands.CreateBrand; 
-using ChargeManagement.Application.Menus.Commands.CreateMenu;
-using ChargeManagement.Contracts.Authentication;
+﻿using ChargeManagement.Application.Common;
+using ChargeManagement.Application.Common.Commands.CreateBrand;
 using ChargeManagement.Contracts.Common.CreateBrand;
-using ChargeManagement.Contracts.Menus;
 using ChargeManagement.Domain.Brand;
-using ChargeManagement.Domain.Menu;
-using ChargeManagement.Domain.Menu.Entities;
 using Mapster;
-
-using BrandModel = ChargeManagement.Domain.Brand.Entities.BrandModel;
-using MenuSection = ChargeManagement.Contracts.Menus.MenuSection;
 
 namespace ChargeManagement.Api.Common.Mapping
 {
@@ -26,8 +17,12 @@ namespace ChargeManagement.Api.Common.Mapping
                 .Map(dest => dest.Name, src => src.Name)
                 .Map(dest => dest.Description, src => src.Description);
 
-            config.NewConfig<BrandModel, BrandModelResponse>()
-                .Map(dest => dest.Id, s => s.Id.Value);
+
+            config.NewConfig<Brand, GetBrandsResponse>()
+                .Map(dest => dest, s => s);
+
+            config.NewConfig<Brand, GetBrandsResponse>()
+                .Map(dest => dest.Brands, src => src);
         }
     }
-}
+} 

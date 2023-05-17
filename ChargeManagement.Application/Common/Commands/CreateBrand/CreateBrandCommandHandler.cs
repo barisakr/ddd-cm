@@ -1,6 +1,5 @@
 ﻿using ChargeManagement.Application.Common.Interfaces.Persistence;
 using ChargeManagement.Domain.Brand;
-using ChargeManagement.Domain.Brand.Entities;
 using ErrorOr;
 using MediatR;
 
@@ -21,11 +20,8 @@ namespace ChargeManagement.Application.Common.Commands.CreateBrand
 
             var brand = Brand.Create( 
                 name: request.Name,
-                description: request.Description,
-                brandModels: request.BrandModels.ConvertAll(brandModel => BrandModel.Create(
-                    brandModel.Name,
-                    brandModel.Description
-                    )));
+                description: request.Description
+                );
 
             _brandRepository.Add(brand);
 
