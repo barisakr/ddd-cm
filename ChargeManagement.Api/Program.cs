@@ -12,6 +12,8 @@ builder.Services
     .AddApplication()
     .AddInfrastructure(builder.Configuration);
 
+ 
+
 var app = builder.Build();
 
 app.UseExceptionHandler("/error");

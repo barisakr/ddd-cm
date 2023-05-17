@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <ProjectReference Include="..\ChargeManagement.Contracts\ChargeManagement.Contracts.csproj" />
     <ProjectReference Include="..\ChargeManagement.Domain\ChargeManagement.Domain.csproj" />
   </ItemGroup>
 

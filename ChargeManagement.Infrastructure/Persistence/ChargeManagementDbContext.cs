@@ -14,8 +14,7 @@ namespace ChargeManagement.Infrastructure.Persistence
         public DbSet<Menu> Menus { get; set; }
         public DbSet<User> Users { get; set; } 
         public DbSet<Brand> Brands { get; set; } 
-
-
+        public DbSet<BrandModel> BrandModels { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
           modelBuilder.ApplyConfigurationsFromAssembly(typeof(ChargeManagementDbContext).Assembly);

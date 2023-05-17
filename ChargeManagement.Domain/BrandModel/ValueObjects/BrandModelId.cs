@@ -3,11 +3,11 @@
 namespace ChargeManagement.Domain.Brand.ValueObjects
 {
 
-    public sealed class BrandId : ValueObject
+    public sealed class BrandModelId : ValueObject
     {
         public Guid Value { get; set; }
 
-        private BrandId(Guid value)
+        private BrandModelId(Guid value)
         {
             Value = value;
         }
@@ -17,17 +17,14 @@ namespace ChargeManagement.Domain.Brand.ValueObjects
             yield return Value;
         }
 
-        public static BrandId Create(Guid value)
+        public static BrandModelId Create(Guid value)
         {
-            return new BrandId(value);
+            return new BrandModelId(value);
         }
 
-        public static BrandId CreateUnique()
+        public static BrandModelId CreateUnique()
         {
-            return new BrandId(Guid.NewGuid());
-        }
-        public BrandId()
-        {
+            return new BrandModelId(Guid.NewGuid());
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ChargeManagement.Domain.Brand;
 
 namespace ChargeManagement.Contracts.Common.CreateBrand
 {
@@ -12,10 +13,6 @@ namespace ChargeManagement.Contracts.Common.CreateBrand
             List<BrandModel> BrandModels
         );
 
-        public record BrandModel
-        (
-            string Name,
-            string Description
-        );
+      
 
 }

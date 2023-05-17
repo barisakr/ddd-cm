@@ -1,6 +1,6 @@
-﻿using ChargeManagement.Application.Common;
-using ChargeManagement.Application.Common.Commands.CreateBrand;
+﻿using ChargeManagement.Application.Common.Commands.CreateBrand;
 using ChargeManagement.Contracts.Common.CreateBrand;
+using ChargeManagement.Contracts.Common.GetBrands;
 using ChargeManagement.Domain.Brand;
 using Mapster;
 
@@ -22,7 +22,7 @@ namespace ChargeManagement.Api.Common.Mapping
                 .Map(dest => dest, s => s);
 
             config.NewConfig<Brand, GetBrandsResponse>()
-                .Map(dest => dest.Brands, src => src);
+                .Map(dest => dest.data, src => src);
         }
     }
 } 

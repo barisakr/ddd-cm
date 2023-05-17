@@ -5,6 +5,7 @@ using MediatR;
 using ChargeManagement.Domain.Common.Errors;
 using ChargeManagement.Application.Authentication.Common;
 using ChargeManagement.Application.Common;
+using ChargeManagement.Contracts.Common.GetBrands;
 using ChargeManagement.Domain.Brand;
 using ChargeManagement.Domain.User;
 

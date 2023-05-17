@@ -1,12 +1,11 @@
-﻿using ChargeManagement.Application.Authentication.Queries.Login;
-using ChargeManagement.Application.Common;
+﻿using AutoMapper;
 using ChargeManagement.Application.Common.Commands.CreateBrand;
+using ChargeManagement.Application.Common.Queries.GetBrandModels;
 using ChargeManagement.Application.Common.Queries.GetBrands;
-using ChargeManagement.Application.Users;
 using ChargeManagement.Contracts.Common.CreateBrand;
-using ChargeManagement.Contracts.Menus;
-using ChargeManagement.Contracts.Users;
-using MapsterMapper;
+using ChargeManagement.Contracts.Common.GetBrandModels;
+using ChargeManagement.Contracts.Common.GetBrands;
+using ChargeManagement.Domain.Brand;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -45,16 +44,28 @@ namespace ChargeManagement.Api.Controllers
         [Route("GetBrands")]
         public async Task<IActionResult> GetBrands()
         {
+            var brandResult = await _mediatr.Send(new GetBrandsQuery());
+            return brandResult.Match(
+                brand => Ok(brandResult.Value),
+                errors => Problem(errors));
+
+        }
+
+
+        [HttpGet]
+        [Route("GetBrandModels")]
+        public async Task<IActionResult> GetBrandModels([FromBody] GetBrandModelsRequest request)
+        {
             try
             {
-                {
-                    var brandResult = await _mediatr.Send(new GetBrandsQuery()); 
 
-                    return brandResult.Match(
-                        brand => Ok(brandResult.Value),
-                        errors => Problem(errors));
 
-                }
+                var brandmodelResult = await _mediatr.Send(new GetBrandModelsQuery(request.BrandId));
+                
+                return brandmodelResult.Match(
+                    brand => Ok(brandmodelResult.Value.data),
+                    errors => Problem(errors));
+
             }
             catch (Exception e)
             {
@@ -62,5 +73,6 @@ namespace ChargeManagement.Api.Controllers
                 throw;
             }
         }
+
     }
 }
