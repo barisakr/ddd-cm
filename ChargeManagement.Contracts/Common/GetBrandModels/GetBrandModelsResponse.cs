@@ -5,17 +5,12 @@ namespace ChargeManagement.Contracts.Common.GetBrandModels
 {
     public record GetBrandModelsResponse(
         List<BrandModel> data
-    ); 
+    );
+
     public record GetBrandModelsResponseDto(
-        List<BrandModelsDto> data
+        Guid Id,
+        Guid BrandId,
+        string Name,
+        string Description
     );
-
-    public record BrandModelsDto(
-        Guid brandId,
-        string name,
-        string description
-    );
-
-
-
 }

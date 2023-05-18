@@ -10,4 +10,10 @@ namespace ChargeManagement.Contracts.Common.GetBrands
     public record GetBrandsResponse(
         List<Brand> data
     );
+
+    public record GetBrandsResponseDto(
+        Guid Id,
+        string Name,
+        string Description
+    );
 }

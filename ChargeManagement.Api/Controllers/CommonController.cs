@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+﻿ 
 using ChargeManagement.Application.Common.Commands.CreateBrand;
 using ChargeManagement.Application.Common.Queries.GetBrandModels;
 using ChargeManagement.Application.Common.Queries.GetBrands;
@@ -6,6 +6,8 @@ using ChargeManagement.Contracts.Common.CreateBrand;
 using ChargeManagement.Contracts.Common.GetBrandModels;
 using ChargeManagement.Contracts.Common.GetBrands;
 using ChargeManagement.Domain.Brand;
+using ChargeManagement.Domain.Brand.ValueObjects;
+using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -44,10 +46,21 @@ namespace ChargeManagement.Api.Controllers
         [Route("GetBrands")]
         public async Task<IActionResult> GetBrands()
         {
+            var brandsResponseDto = new List<GetBrandsResponseDto>();
+
             var brandResult = await _mediatr.Send(new GetBrandsQuery());
+
+            if (!brandResult.IsError)
+            {
+                foreach (var itemModel in brandResult.Value.data)
+                {
+                    var brand = new GetBrandsResponseDto(itemModel.Id.Value, itemModel.Name, itemModel.Description);
+                    brandsResponseDto.Add(brand);
+                }
+            }
             return brandResult.Match(
-                brand => Ok(brandResult.Value),
-                errors => Problem(errors));
+            brand => Ok(brandsResponseDto),
+            errors => Problem(errors));
 
         }
 
@@ -59,11 +72,23 @@ namespace ChargeManagement.Api.Controllers
             try
             {
 
+                var brandModelsResponseDto = new List<GetBrandModelsResponseDto>();
+                var brandmodelResult = await _mediatr.Send(new GetBrandModelsQuery(BrandId.Create(request.BrandId)));
 
-                var brandmodelResult = await _mediatr.Send(new GetBrandModelsQuery(request.BrandId));
-                
+
+                if (!brandmodelResult.IsError)
+                {
+                    foreach (var itemModel in brandmodelResult.Value.data)
+                    {
+                        var brandModel = new GetBrandModelsResponseDto(
+                            itemModel.Id.Value, itemModel.BrandId.Value, itemModel.Name, itemModel.Description);
+
+                        brandModelsResponseDto.Add(brandModel);
+                    }
+                }
+
                 return brandmodelResult.Match(
-                    brand => Ok(brandmodelResult.Value.data),
+                    brand => Ok(brandModelsResponseDto),
                     errors => Problem(errors));
 
             }

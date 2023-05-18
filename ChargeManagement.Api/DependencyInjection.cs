@@ -13,7 +13,8 @@ namespace ChargeManagement.Api
         {
             services.AddControllers();
             services.AddSingleton<ProblemDetailsFactory, ChargeManagementProblemDetailsFactory>();
-            services.AddAutoMapper(typeof(Program));
+            //services.AddAutoMapper(typeof(Program));
+            services.AddMappings();
             return services;
         }
     }

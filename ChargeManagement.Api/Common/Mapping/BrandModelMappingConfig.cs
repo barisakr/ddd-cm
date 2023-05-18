@@ -12,7 +12,7 @@ namespace ChargeManagement.Api.Common.Mapping
     {
         public void Register(TypeAdapterConfig config)
         { 
-            config.NewConfig<List<BrandModel>, GetBrandModelsResponse> ()
+            config.NewConfig<List<BrandModel>, GetBrandModelsResponse>()
                 .Map(dest => dest.data, s => s.Adapt<List<BrandModel>>());
  
         }

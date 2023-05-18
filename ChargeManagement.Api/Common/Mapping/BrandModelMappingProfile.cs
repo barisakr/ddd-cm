@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using ChargeManagement.Contracts.Common.GetBrandModels;
+using ChargeManagement.Contracts.Common.GetBrandModels; 
 using ChargeManagement.Contracts.Common.GetBrands;
 using ChargeManagement.Domain.Brand;
 
@@ -9,9 +9,8 @@ namespace ChargeManagement.Api.Common.Mapping
     {
         public BrandModelMappingProfile()
         {
-            CreateMap<BrandModel, GetBrandModelsResponseDto>();
+            
 
-            CreateMap<GetBrandModelsResponseDto, BrandModel>();
             CreateMap<BrandModel, GetBrandModelsRequest>(); 
             CreateMap<GetBrandModelsResponse, GetBrandModelsRequest>();
 
